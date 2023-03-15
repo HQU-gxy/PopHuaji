@@ -1,0 +1,938 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|win32">
+      <Configuration>Debug</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|win32">
+      <Configuration>Release</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1F6AF762-6D69-3241-AD6C-0B52B334A151}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>win32</Platform>
+    <ProjectName>poop</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">D:\Poooooopstar\poooooop\poop\win32-build\bin\poop\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">poop.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">poop</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">D:\Poooooopstar\poooooop\poop\win32-build\bin\poop\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">poop.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|win32'">poop</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">D:\Poooooopstar\poooooop\poop\win32-build\bin\poop\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">poop.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">poop</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">D:\Poooooopstar\poooooop\poop\win32-build\bin\poop\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">poop.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">poop</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Poooooopstar\poooooop\poop\Classes;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\audio\include;D:\Poooooopstar\poooooop\poop\cocos2d;D:\Poooooopstar\poooooop\poop\cocos2d\cocos;D:\Poooooopstar\poooooop\poop\cocos2d\extensions;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\editor-support;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\base;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\recast\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\tinyxml2\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxhash\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxtea\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\clipper\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\edtaa3func\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\ConvertUTF\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\poly2tri\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\md5\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\unzip\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\Box2D\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\chipmunk\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\freetype2\include\win32\freetype2;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include\bullet;D:\Poooooopstar\poooooop\poop\cocos2d\external\jpeg\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\openssl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\uv\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\webp\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\websockets\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\curl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\png\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\gles\include\OGLES;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\icon\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\MP3Decoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OggDecoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OpenalSoft\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\glfw3\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;COCOS2D_DEBUG=1;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;COCOS2D_DEBUG=1;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Poooooopstar\poooooop\poop\Classes;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\audio\include;D:\Poooooopstar\poooooop\poop\cocos2d;D:\Poooooopstar\poooooop\poop\cocos2d\cocos;D:\Poooooopstar\poooooop\poop\cocos2d\extensions;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\editor-support;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\base;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\recast\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\tinyxml2\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxhash\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxtea\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\clipper\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\edtaa3func\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\ConvertUTF\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\poly2tri\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\md5\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\unzip\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\Box2D\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\chipmunk\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\freetype2\include\win32\freetype2;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include\bullet;D:\Poooooopstar\poooooop\poop\cocos2d\external\jpeg\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\openssl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\uv\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\webp\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\websockets\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\curl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\png\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\gles\include\OGLES;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\icon\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\MP3Decoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OggDecoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OpenalSoft\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\glfw3\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Poooooopstar\poooooop\poop\Classes;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\audio\include;D:\Poooooopstar\poooooop\poop\cocos2d;D:\Poooooopstar\poooooop\poop\cocos2d\cocos;D:\Poooooopstar\poooooop\poop\cocos2d\extensions;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\editor-support;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\base;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\recast\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\tinyxml2\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxhash\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxtea\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\clipper\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\edtaa3func\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\ConvertUTF\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\poly2tri\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\md5\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\unzip\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\Box2D\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\chipmunk\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\freetype2\include\win32\freetype2;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include\bullet;D:\Poooooopstar\poooooop\poop\cocos2d\external\jpeg\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\openssl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\uv\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\webp\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\websockets\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\curl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\png\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\gles\include\OGLES;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\icon\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\MP3Decoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OggDecoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OpenalSoft\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\glfw3\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>												</Message>
+      <Command>setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Debug/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Debug/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/uv/prebuilt/win32/uv.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Debug/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/websockets/prebuilt/win32/websockets.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Debug/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/curl/prebuilt/win32/libcurl.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Debug/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Debug/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Debug/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Debug/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Debug/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Debug/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Debug/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Debug/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Debug/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\Debug\cocos2d.lib;lib\Debug\external.lib;..\cocos2d\external\Box2D\prebuilt\win32\debug\libbox2d.lib;..\cocos2d\external\chipmunk\prebuilt\win32\debug-lib\libchipmunk.lib;..\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\Debug\ext_recast.lib;..\cocos2d\external\bullet\prebuilt\win32\debug\libbullet.lib;..\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;..\cocos2d\external\webp\prebuilt\win32\libwebp.lib;..\cocos2d\external\websockets\prebuilt\win32\websockets.lib;..\cocos2d\external\openssl\prebuilt\win32\libssl.lib;..\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;..\cocos2d\external\uv\prebuilt\win32\uv_a.lib;lib\Debug\ext_tinyxml2.lib;lib\Debug\ext_xxhash.lib;lib\Debug\ext_xxtea.lib;lib\Debug\ext_clipper.lib;lib\Debug\ext_edtaa3func.lib;lib\Debug\ext_convertUTF.lib;lib\Debug\ext_poly2tri.lib;lib\Debug\ext_md5.lib;..\cocos2d\external\curl\prebuilt\win32\libcurl.lib;..\cocos2d\external\png\prebuilt\win32\libpng.lib;..\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;..\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;..\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;..\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;..\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;..\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\Debug\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Poooooopstar/poooooop/poop/win32-build/Debug/poop.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Debug/poop.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Poooooopstar\poooooop\poop\Classes;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\audio\include;D:\Poooooopstar\poooooop\poop\cocos2d;D:\Poooooopstar\poooooop\poop\cocos2d\cocos;D:\Poooooopstar\poooooop\poop\cocos2d\extensions;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\editor-support;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\base;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\recast\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\tinyxml2\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxhash\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxtea\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\clipper\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\edtaa3func\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\ConvertUTF\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\poly2tri\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\md5\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\unzip\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\Box2D\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\chipmunk\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\freetype2\include\win32\freetype2;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include\bullet;D:\Poooooopstar\poooooop\poop\cocos2d\external\jpeg\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\openssl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\uv\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\webp\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\websockets\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\curl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\png\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\gles\include\OGLES;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\icon\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\MP3Decoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OggDecoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OpenalSoft\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\glfw3\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Poooooopstar\poooooop\poop\Classes;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\audio\include;D:\Poooooopstar\poooooop\poop\cocos2d;D:\Poooooopstar\poooooop\poop\cocos2d\cocos;D:\Poooooopstar\poooooop\poop\cocos2d\extensions;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\editor-support;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\base;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\recast\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\tinyxml2\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxhash\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxtea\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\clipper\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\edtaa3func\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\ConvertUTF\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\poly2tri\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\md5\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\unzip\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\Box2D\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\chipmunk\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\freetype2\include\win32\freetype2;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include\bullet;D:\Poooooopstar\poooooop\poop\cocos2d\external\jpeg\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\openssl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\uv\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\webp\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\websockets\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\curl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\png\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\gles\include\OGLES;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\icon\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\MP3Decoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OggDecoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OpenalSoft\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\glfw3\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Poooooopstar\poooooop\poop\Classes;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\audio\include;D:\Poooooopstar\poooooop\poop\cocos2d;D:\Poooooopstar\poooooop\poop\cocos2d\cocos;D:\Poooooopstar\poooooop\poop\cocos2d\extensions;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\editor-support;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\base;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\recast\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\tinyxml2\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxhash\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxtea\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\clipper\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\edtaa3func\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\ConvertUTF\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\poly2tri\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\md5\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\unzip\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\Box2D\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\chipmunk\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\freetype2\include\win32\freetype2;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include\bullet;D:\Poooooopstar\poooooop\poop\cocos2d\external\jpeg\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\openssl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\uv\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\webp\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\websockets\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\curl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\png\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\gles\include\OGLES;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\icon\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\MP3Decoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OggDecoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OpenalSoft\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\glfw3\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>												</Message>
+      <Command>setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Release/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Release/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/uv/prebuilt/win32/uv.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Release/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/websockets/prebuilt/win32/websockets.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Release/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/curl/prebuilt/win32/libcurl.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Release/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Release/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Release/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Release/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Release/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Release/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Release/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Release/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Release/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\Release\cocos2d.lib;lib\Release\external.lib;..\cocos2d\external\Box2D\prebuilt\win32\release\libbox2d.lib;..\cocos2d\external\chipmunk\prebuilt\win32\release-lib\libchipmunk.lib;..\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\Release\ext_recast.lib;..\cocos2d\external\bullet\prebuilt\win32\release\libbullet.lib;..\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;..\cocos2d\external\webp\prebuilt\win32\libwebp.lib;..\cocos2d\external\websockets\prebuilt\win32\websockets.lib;..\cocos2d\external\openssl\prebuilt\win32\libssl.lib;..\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;..\cocos2d\external\uv\prebuilt\win32\uv_a.lib;lib\Release\ext_tinyxml2.lib;lib\Release\ext_xxhash.lib;lib\Release\ext_xxtea.lib;lib\Release\ext_clipper.lib;lib\Release\ext_edtaa3func.lib;lib\Release\ext_convertUTF.lib;lib\Release\ext_poly2tri.lib;lib\Release\ext_md5.lib;..\cocos2d\external\curl\prebuilt\win32\libcurl.lib;..\cocos2d\external\png\prebuilt\win32\libpng.lib;..\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;..\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;..\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;..\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;..\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;..\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\Release\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Poooooopstar/poooooop/poop/win32-build/Release/poop.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Release/poop.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Poooooopstar\poooooop\poop\Classes;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\audio\include;D:\Poooooopstar\poooooop\poop\cocos2d;D:\Poooooopstar\poooooop\poop\cocos2d\cocos;D:\Poooooopstar\poooooop\poop\cocos2d\extensions;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\editor-support;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\base;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\recast\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\tinyxml2\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxhash\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxtea\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\clipper\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\edtaa3func\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\ConvertUTF\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\poly2tri\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\md5\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\unzip\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\Box2D\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\chipmunk\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\freetype2\include\win32\freetype2;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include\bullet;D:\Poooooopstar\poooooop\poop\cocos2d\external\jpeg\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\openssl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\uv\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\webp\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\websockets\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\curl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\png\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\gles\include\OGLES;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\icon\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\MP3Decoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OggDecoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OpenalSoft\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\glfw3\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Poooooopstar\poooooop\poop\Classes;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\audio\include;D:\Poooooopstar\poooooop\poop\cocos2d;D:\Poooooopstar\poooooop\poop\cocos2d\cocos;D:\Poooooopstar\poooooop\poop\cocos2d\extensions;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\editor-support;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\base;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\recast\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\tinyxml2\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxhash\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxtea\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\clipper\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\edtaa3func\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\ConvertUTF\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\poly2tri\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\md5\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\unzip\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\Box2D\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\chipmunk\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\freetype2\include\win32\freetype2;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include\bullet;D:\Poooooopstar\poooooop\poop\cocos2d\external\jpeg\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\openssl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\uv\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\webp\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\websockets\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\curl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\png\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\gles\include\OGLES;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\icon\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\MP3Decoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OggDecoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OpenalSoft\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\glfw3\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Poooooopstar\poooooop\poop\Classes;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\audio\include;D:\Poooooopstar\poooooop\poop\cocos2d;D:\Poooooopstar\poooooop\poop\cocos2d\cocos;D:\Poooooopstar\poooooop\poop\cocos2d\extensions;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\editor-support;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\base;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\recast\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\tinyxml2\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxhash\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxtea\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\clipper\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\edtaa3func\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\ConvertUTF\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\poly2tri\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\md5\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\unzip\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\Box2D\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\chipmunk\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\freetype2\include\win32\freetype2;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include\bullet;D:\Poooooopstar\poooooop\poop\cocos2d\external\jpeg\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\openssl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\uv\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\webp\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\websockets\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\curl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\png\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\gles\include\OGLES;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\icon\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\MP3Decoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OggDecoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OpenalSoft\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\glfw3\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>												</Message>
+      <Command>setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/MinSizeRel/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/MinSizeRel/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/uv/prebuilt/win32/uv.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/MinSizeRel/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/websockets/prebuilt/win32/websockets.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/MinSizeRel/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/curl/prebuilt/win32/libcurl.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/MinSizeRel/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/MinSizeRel/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/MinSizeRel/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/MinSizeRel/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/MinSizeRel/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/MinSizeRel/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/MinSizeRel/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/MinSizeRel/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/MinSizeRel/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\MinSizeRel\cocos2d.lib;lib\MinSizeRel\external.lib;..\cocos2d\external\Box2D\prebuilt\win32\release\libbox2d.lib;..\cocos2d\external\chipmunk\prebuilt\win32\release-lib\libchipmunk.lib;..\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\MinSizeRel\ext_recast.lib;..\cocos2d\external\bullet\prebuilt\win32\release\libbullet.lib;..\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;..\cocos2d\external\webp\prebuilt\win32\libwebp.lib;..\cocos2d\external\websockets\prebuilt\win32\websockets.lib;..\cocos2d\external\openssl\prebuilt\win32\libssl.lib;..\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;..\cocos2d\external\uv\prebuilt\win32\uv_a.lib;lib\MinSizeRel\ext_tinyxml2.lib;lib\MinSizeRel\ext_xxhash.lib;lib\MinSizeRel\ext_xxtea.lib;lib\MinSizeRel\ext_clipper.lib;lib\MinSizeRel\ext_edtaa3func.lib;lib\MinSizeRel\ext_convertUTF.lib;lib\MinSizeRel\ext_poly2tri.lib;lib\MinSizeRel\ext_md5.lib;..\cocos2d\external\curl\prebuilt\win32\libcurl.lib;..\cocos2d\external\png\prebuilt\win32\libpng.lib;..\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;..\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;..\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;..\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;..\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;..\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\MinSizeRel\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Poooooopstar/poooooop/poop/win32-build/MinSizeRel/poop.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/MinSizeRel/poop.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Poooooopstar\poooooop\poop\Classes;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\audio\include;D:\Poooooopstar\poooooop\poop\cocos2d;D:\Poooooopstar\poooooop\poop\cocos2d\cocos;D:\Poooooopstar\poooooop\poop\cocos2d\extensions;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\editor-support;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\base;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\recast\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\tinyxml2\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxhash\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxtea\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\clipper\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\edtaa3func\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\ConvertUTF\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\poly2tri\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\md5\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\unzip\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\Box2D\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\chipmunk\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\freetype2\include\win32\freetype2;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include\bullet;D:\Poooooopstar\poooooop\poop\cocos2d\external\jpeg\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\openssl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\uv\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\webp\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\websockets\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\curl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\png\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\gles\include\OGLES;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\icon\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\MP3Decoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OggDecoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OpenalSoft\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\glfw3\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Poooooopstar\poooooop\poop\Classes;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\audio\include;D:\Poooooopstar\poooooop\poop\cocos2d;D:\Poooooopstar\poooooop\poop\cocos2d\cocos;D:\Poooooopstar\poooooop\poop\cocos2d\extensions;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\editor-support;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\base;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\recast\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\tinyxml2\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxhash\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxtea\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\clipper\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\edtaa3func\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\ConvertUTF\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\poly2tri\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\md5\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\unzip\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\Box2D\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\chipmunk\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\freetype2\include\win32\freetype2;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include\bullet;D:\Poooooopstar\poooooop\poop\cocos2d\external\jpeg\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\openssl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\uv\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\webp\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\websockets\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\curl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\png\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\gles\include\OGLES;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\icon\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\MP3Decoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OggDecoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OpenalSoft\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\glfw3\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Poooooopstar\poooooop\poop\Classes;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\audio\include;D:\Poooooopstar\poooooop\poop\cocos2d;D:\Poooooopstar\poooooop\poop\cocos2d\cocos;D:\Poooooopstar\poooooop\poop\cocos2d\extensions;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\editor-support;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\base;D:\Poooooopstar\poooooop\poop\cocos2d\cocos\platform\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\recast\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\tinyxml2\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxhash\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\xxtea\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\clipper\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\edtaa3func\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\ConvertUTF\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\poly2tri\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\md5\..;D:\Poooooopstar\poooooop\poop\cocos2d\external\unzip\.;D:\Poooooopstar\poooooop\poop\cocos2d\external\Box2D\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\chipmunk\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\freetype2\include\win32\freetype2;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\bullet\include\bullet;D:\Poooooopstar\poooooop\poop\cocos2d\external\jpeg\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\openssl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\uv\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\webp\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\websockets\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\curl\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\png\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\gles\include\OGLES;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\icon\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\MP3Decoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OggDecoder\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\win32-specific\OpenalSoft\include;D:\Poooooopstar\poooooop\poop\cocos2d\external\glfw3\include\win32;D:\Poooooopstar\poooooop\poop\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>												</Message>
+      <Command>setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/RelWithDebInfo/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/RelWithDebInfo/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/uv/prebuilt/win32/uv.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/RelWithDebInfo/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/websockets/prebuilt/win32/websockets.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/RelWithDebInfo/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/curl/prebuilt/win32/libcurl.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/RelWithDebInfo/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/RelWithDebInfo/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/RelWithDebInfo/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/RelWithDebInfo/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/RelWithDebInfo/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/RelWithDebInfo/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/RelWithDebInfo/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/RelWithDebInfo/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/RelWithDebInfo/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\RelWithDebInfo\cocos2d.lib;lib\RelWithDebInfo\external.lib;..\cocos2d\external\Box2D\prebuilt\win32\release\libbox2d.lib;..\cocos2d\external\chipmunk\prebuilt\win32\release-lib\libchipmunk.lib;..\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\RelWithDebInfo\ext_recast.lib;..\cocos2d\external\bullet\prebuilt\win32\release\libbullet.lib;..\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;..\cocos2d\external\webp\prebuilt\win32\libwebp.lib;..\cocos2d\external\websockets\prebuilt\win32\websockets.lib;..\cocos2d\external\openssl\prebuilt\win32\libssl.lib;..\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;..\cocos2d\external\uv\prebuilt\win32\uv_a.lib;lib\RelWithDebInfo\ext_tinyxml2.lib;lib\RelWithDebInfo\ext_xxhash.lib;lib\RelWithDebInfo\ext_xxtea.lib;lib\RelWithDebInfo\ext_clipper.lib;lib\RelWithDebInfo\ext_edtaa3func.lib;lib\RelWithDebInfo\ext_convertUTF.lib;lib\RelWithDebInfo\ext_poly2tri.lib;lib\RelWithDebInfo\ext_md5.lib;..\cocos2d\external\curl\prebuilt\win32\libcurl.lib;..\cocos2d\external\png\prebuilt\win32\libpng.lib;..\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;..\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;..\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;..\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;..\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;..\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\RelWithDebInfo\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Poooooopstar/poooooop/poop/win32-build/RelWithDebInfo/poop.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/RelWithDebInfo/poop.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Poooooopstar\poooooop\poop\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Building Custom Rule D:/Poooooopstar/poooooop/poop/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Poooooopstar/poooooop/poop -BD:/Poooooopstar/poooooop/poop/win32-build --check-stamp-file D:/Poooooopstar/poooooop/poop/win32-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosConfigDepend.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Building Custom Rule D:/Poooooopstar/poooooop/poop/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|win32'">setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Poooooopstar/poooooop/poop -BD:/Poooooopstar/poooooop/poop/win32-build --check-stamp-file D:/Poooooopstar/poooooop/poop/win32-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosConfigDepend.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Building Custom Rule D:/Poooooopstar/poooooop/poop/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Poooooopstar/poooooop/poop -BD:/Poooooopstar/poooooop/poop/win32-build --check-stamp-file D:/Poooooopstar/poooooop/poop/win32-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosConfigDepend.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Building Custom Rule D:/Poooooopstar/poooooop/poop/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">setlocal
+"D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Poooooopstar/poooooop/poop -BD:/Poooooopstar/poooooop/poop/win32-build --check-stamp-file D:/Poooooopstar/poooooop/poop/win32-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\Poooooopstar\poooooop\poop\cocos2d\cmake\Modules\CocosConfigDepend.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake;D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">D:\Poooooopstar\poooooop\poop\win32-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Classes\AppDelegate.h" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Classes\GameLevel.h" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Classes\GameScene.h" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Classes\PopStar.h" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Classes\PopStarDataMgr.h" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Classes\PopStarLayer.h" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Classes\PopStarState.h" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Classes\Star.h" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Classes\StartLayer.h" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\proj.win32\main.h" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\proj.win32\resource.h" />
+    <ClCompile Include="D:\Poooooopstar\poooooop\poop\Classes\AppDelegate.cpp" />
+    <ClCompile Include="D:\Poooooopstar\poooooop\poop\Classes\GameLevel.cpp" />
+    <ClCompile Include="D:\Poooooopstar\poooooop\poop\Classes\GameScene.cpp" />
+    <ClCompile Include="D:\Poooooopstar\poooooop\poop\Classes\PopStar.cpp" />
+    <ClCompile Include="D:\Poooooopstar\poooooop\poop\Classes\PopStarDataMgr.cpp" />
+    <ClCompile Include="D:\Poooooopstar\poooooop\poop\Classes\PopStarLayer.cpp" />
+    <ClCompile Include="D:\Poooooopstar\poooooop\poop\Classes\PopStarState.cpp" />
+    <ClCompile Include="D:\Poooooopstar\poooooop\poop\Classes\Star.cpp" />
+    <ClCompile Include="D:\Poooooopstar\poooooop\poop\Classes\StartLayer.cpp" />
+    <ClCompile Include="D:\Poooooopstar\poooooop\poop\proj.win32\main.cpp" />
+    <ResourceCompile Include="D:\Poooooopstar\poooooop\poop\proj.win32\game.rc" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\CloseNormal.png" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\CloseSelected.png" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\HelloWorld.png" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\Thumbs.db" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\.svn\all-wcprops" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\.svn\entries" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\.svn\format" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\all-wcprops" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\entries" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\format" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\prop-base\00010.png.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\prop-base\Thumbs.db.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\text-base\00010.png.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\text-base\Thumbs.db.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\00010.png" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\Thumbs.db" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\all-wcprops" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\entries" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\format" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\prop-base\Marker Felt.ttf.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\prop-base\arial.ttf.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\text-base\Marker Felt.ttf.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\text-base\arial.ttf.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\Marker Felt.ttf" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\arial.ttf" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\popstar_bg.png" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\popstar_start.png" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\res\.gitkeep" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\all-wcprops" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\entries" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\format" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\Thumbs.db.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\blue.png.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\green.png.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\purple.png.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\red.png.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\yellow.png.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\Thumbs.db.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\blue.png.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\green.png.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\purple.png.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\red.png.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\yellow.png.svn-base" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\Thumbs.db" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\blue.png" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\green.png" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\purple.png" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\red.png" />
+    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\yellow.png" />
+    <ClCompile Include="D:\Poooooopstar\poooooop\poop\cocos2d\cocos\precheader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Poooooopstar\poooooop\poop\win32-build\ZERO_CHECK.vcxproj">
+      <Project>{29C428EC-5FF1-3DD4-85C4-4081528C5E80}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Poooooopstar\poooooop\poop\win32-build\SYNC_RESOURCE-poop.vcxproj">
+      <Project>{D0B7C4D5-FC78-33A9-B295-6601E7197994}</Project>
+      <Name>SYNC_RESOURCE-poop</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Poooooopstar\poooooop\poop\win32-build\engine\cocos\core\cocos2d.vcxproj">
+      <Project>{266DC389-38EA-3AC6-8E5C-5F972C5CDE20}</Project>
+      <Name>cocos2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Poooooopstar\poooooop\poop\win32-build\engine\external\clipper\ext_clipper.vcxproj">
+      <Project>{25A766BB-FB0B-3CD2-8B57-F610435627B4}</Project>
+      <Name>ext_clipper</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Poooooopstar\poooooop\poop\win32-build\engine\external\ConvertUTF\ext_convertUTF.vcxproj">
+      <Project>{96DA19A8-F680-3729-8A15-27FEAD7134CB}</Project>
+      <Name>ext_convertUTF</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Poooooopstar\poooooop\poop\win32-build\engine\external\edtaa3func\ext_edtaa3func.vcxproj">
+      <Project>{8F39E87B-1BD8-3F6D-A489-46575EFBD236}</Project>
+      <Name>ext_edtaa3func</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Poooooopstar\poooooop\poop\win32-build\engine\external\md5\ext_md5.vcxproj">
+      <Project>{96C42453-C4B9-3407-9A67-83D57F19DD20}</Project>
+      <Name>ext_md5</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Poooooopstar\poooooop\poop\win32-build\engine\external\poly2tri\ext_poly2tri.vcxproj">
+      <Project>{68C04AA3-FC54-33AA-8760-59EF5A0E6C64}</Project>
+      <Name>ext_poly2tri</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Poooooopstar\poooooop\poop\win32-build\engine\external\recast\ext_recast.vcxproj">
+      <Project>{750265CC-E133-3287-9CB4-2F94901035B2}</Project>
+      <Name>ext_recast</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Poooooopstar\poooooop\poop\win32-build\engine\external\tinyxml2\ext_tinyxml2.vcxproj">
+      <Project>{088BDFB1-35B2-378A-B868-B1AFA9060291}</Project>
+      <Name>ext_tinyxml2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Poooooopstar\poooooop\poop\win32-build\engine\external\unzip\ext_unzip.vcxproj">
+      <Project>{8FBE82C4-8608-36A3-8E10-2F35CC1CDCBA}</Project>
+      <Name>ext_unzip</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Poooooopstar\poooooop\poop\win32-build\engine\external\xxhash\ext_xxhash.vcxproj">
+      <Project>{00705399-350A-3F43-9382-A813D51FAE30}</Project>
+      <Name>ext_xxhash</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Poooooopstar\poooooop\poop\win32-build\engine\external\xxtea\ext_xxtea.vcxproj">
+      <Project>{19FF5254-36ED-3521-80DE-14FFB1776D9B}</Project>
+      <Name>ext_xxtea</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Poooooopstar\poooooop\poop\win32-build\engine\external\external.vcxproj">
+      <Project>{B0764818-03E5-39C6-87B1-640ADEBF3483}</Project>
+      <Name>external</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
