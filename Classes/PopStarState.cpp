@@ -125,7 +125,7 @@ void GameOverState::execute(float delta)
 		int num = popStar->getLeftStarNum();
 		if (num == 0)
 		{
-			popStar->gotoStartLayer();
+			popStar->GameOver();
 		}
 	}
 }

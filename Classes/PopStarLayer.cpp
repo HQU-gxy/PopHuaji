@@ -30,10 +30,10 @@ bool PopStarLayer::init()
 	srand((unsigned)time(NULL));
 
 	float scale = visibleSize.width / 320.f;
-	Sprite* popStarBg = Sprite::create("popstar_bg.png");
-	popStarBg->setPosition(Vec2(280 * scale, 160 * scale));
-	popStarBg->setScale(1);
-	this->addChild(popStarBg, 0);
+	Sprite* levelInfoHint = Sprite::create("level_info_hint.png");
+	levelInfoHint->setPosition(Vec2(280 * scale, 160 * scale));
+	levelInfoHint->setScale(1);
+	this->addChild(levelInfoHint, 0);
 
 	historyTotalScore = Label::createWithTTF("0", "fonts/arial.ttf", 24);
 	if (historyTotalScore)

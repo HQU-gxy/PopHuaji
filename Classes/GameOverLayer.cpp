@@ -1,19 +1,20 @@
 #include "GameScene.h"
 #include "GameLevel.h"
-
 #include "StartLayer.h"
+
+#include "GameOverLayer.h"
 #include "AudioEngine.h"
 
 USING_NS_CC;
 
 
-Scene* StartLayer::scene()
+Scene* GameOverLayer::scene()
 {
 	// 'scene' is an autorelease object
 	Scene* scene = Scene::create();
 
 	// 'layer' is an autorelease object
-	StartLayer* layer = StartLayer::create();
+	GameOverLayer* layer = GameOverLayer::create();
 
 	// add layer as a child to scene
 	scene->addChild(layer);
@@ -23,7 +24,7 @@ Scene* StartLayer::scene()
 }
 
 // on "init" you need to initialize your instance
-bool StartLayer::init()
+bool GameOverLayer::init()
 {
 	//////////////////////////////
 	// 1. super init first
@@ -37,28 +38,28 @@ bool StartLayer::init()
 
 	float scale = visibleSize.width / 320.f;
 
-	Sprite* popStarBg = Sprite::create("popstar_start.png");
+	Sprite* popStarBg = Sprite::create("popstar_over.png");
 	popStarBg->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2));
 	popStarBg->setScale(2);
 	this->addChild(popStarBg, 0);
 
-
-	MenuItemImage* item = MenuItemImage::create("buttons/start.png",
-		"buttons/start.png",
-		CC_CALLBACK_1(StartLayer::onClickMenu,this));
+	AudioEngine::play2d("sounds/over.mp3", false);
+	MenuItemImage* item = MenuItemImage::create("buttons/home.png",
+		"buttons/home.png",
+		CC_CALLBACK_1(GameOverLayer::onClickMenu, this));
 
 	item->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 3));
 	item->setScale(1.0, 1.0);
 
 	Menu* menu = Menu::create(item, NULL);
-	menu->setPosition(Vec2(-10,0));
+	menu->setPosition(Vec2(-10, 0));
 	this->addChild(menu);
-	
+
 	return true;
 }
 
-void StartLayer::onClickMenu(Ref* obj)
+void GameOverLayer::onClickMenu(Ref* obj)
 {
-	AudioEngine::play2d("sounds/start_fx.mp3", false);
-	changeLayer(this, GameLevel::create());
+	
+	changeLayer(this, StartLayer::create());
 }

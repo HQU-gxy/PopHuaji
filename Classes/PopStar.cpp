@@ -5,8 +5,9 @@
 #include "PopStarDataMgr.h"
 #include "PopStarState.h"
 #include "StartLayer.h"
-
+#include "GameOverLayer.h"
 #include "PopStar.h"
+#include "AudioEngine.h"
 
 USING_NS_CC;
 
@@ -136,7 +137,7 @@ void PopStar::onClick(const cocos2d::Point& pos)
     {
         // 高亮则消除
         this->onReduce();
-        
+        AudioEngine::play2d("sounds/pop_fx.mp3", false);
         gameLayer->onGuiEvent(EVENT_UPDATE_REDUCE_SCORE, 0);
         
     }
@@ -611,10 +612,10 @@ void PopStar::gotoNextLevel()
     changeLayer( gameLayer, GameLevel::create() );
 }
 
-void PopStar::gotoStartLayer()
-{
+
+void PopStar::GameOver() {
     getPopStarDataMgr().setScore(0);
     getPopStarDataMgr().setLevel(1);
-    
-    changeLayer( gameLayer, StartLayer::create() );
+
+    changeLayer(gameLayer, GameOverLayer::create());
 }

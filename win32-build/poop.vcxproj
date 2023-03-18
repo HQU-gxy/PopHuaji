@@ -115,7 +115,8 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>												</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Debug/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -279,7 +280,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>												</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/Release/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -443,7 +445,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>												</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/MinSizeRel/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -606,7 +609,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>												</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "D:\Program Files\VS\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Poooooopstar/poooooop/poop/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/Poooooopstar/poooooop/poop/win32-build/bin/poop/RelWithDebInfo/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -797,6 +801,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Classes\GameOverLayer.h" />
     <ClInclude Include="D:\Poooooopstar\poooooop\poop\Classes\AppDelegate.h" />
     <ClInclude Include="D:\Poooooopstar\poooooop\poop\Classes\GameLevel.h" />
     <ClInclude Include="D:\Poooooopstar\poooooop\poop\Classes\GameScene.h" />
@@ -808,6 +813,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="D:\Poooooopstar\poooooop\poop\Classes\StartLayer.h" />
     <ClInclude Include="D:\Poooooopstar\poooooop\poop\proj.win32\main.h" />
     <ClInclude Include="D:\Poooooopstar\poooooop\poop\proj.win32\resource.h" />
+    <ClCompile Include="..\Classes\GameOverLayer.cpp" />
     <ClCompile Include="D:\Poooooopstar\poooooop\poop\Classes\AppDelegate.cpp" />
     <ClCompile Include="D:\Poooooopstar\poooooop\poop\Classes\GameLevel.cpp" />
     <ClCompile Include="D:\Poooooopstar\poooooop\poop\Classes\GameScene.cpp" />
@@ -819,55 +825,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\Poooooopstar\poooooop\poop\Classes\StartLayer.cpp" />
     <ClCompile Include="D:\Poooooopstar\poooooop\poop\proj.win32\main.cpp" />
     <ResourceCompile Include="D:\Poooooopstar\poooooop\poop\proj.win32\game.rc" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\CloseNormal.png" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\CloseSelected.png" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\HelloWorld.png" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\Thumbs.db" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\.svn\all-wcprops" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\.svn\entries" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\.svn\format" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\all-wcprops" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\entries" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\format" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\prop-base\00010.png.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\prop-base\Thumbs.db.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\text-base\00010.png.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\text-base\Thumbs.db.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\00010.png" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\Thumbs.db" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\all-wcprops" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\entries" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\format" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\prop-base\Marker Felt.ttf.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\prop-base\arial.ttf.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\text-base\Marker Felt.ttf.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\text-base\arial.ttf.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\Marker Felt.ttf" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\arial.ttf" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\popstar_bg.png" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\popstar_start.png" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\res\.gitkeep" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\all-wcprops" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\entries" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\format" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\Thumbs.db.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\blue.png.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\green.png.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\purple.png.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\red.png.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\yellow.png.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\Thumbs.db.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\blue.png.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\green.png.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\purple.png.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\red.png.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\yellow.png.svn-base" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\Thumbs.db" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\blue.png" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\green.png" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\purple.png" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\red.png" />
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\yellow.png" />
     <ClCompile Include="D:\Poooooopstar\poooooop\poop\cocos2d\cocos\precheader.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -931,6 +888,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{B0764818-03E5-39C6-87B1-640ADEBF3483}</Project>
       <Name>external</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\level_info_hint.png" />
+    <Image Include="..\Resources\popstar_over.png" />
+    <Image Include="..\Resources\popstar_start.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

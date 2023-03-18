@@ -95,6 +95,70 @@ bool Star::init()
 	return true;
 }
 
+void Star::draw(Renderer* renderer, const Mat4& transform, uint32_t flags)
+{
+	if (_texture == nullptr || _texture->getBackendTexture() == nullptr)
+		return;
+
+	//TODO: arnold: current camera can be a non-default one.
+	setMVPMatrixUniform();
+	BlendFunc bf;
+	if (highlight)
+	{
+		bf = { backend::BlendFactor::SRC_COLOR, backend::BlendFactor::ONE };
+	}
+	else
+	{
+		bf = { backend::BlendFactor::SRC_COLOR, backend::BlendFactor::DST_COLOR };
+	}
+	setBlendFunc(bf);
+	
+#if CC_USE_CULLING
+	// Don't calculate the culling if the transform was not updated
+	auto visitingCamera = Camera::getVisitingCamera();
+	auto defaultCamera = Camera::getDefaultCamera();
+	if (visitingCamera == nullptr)
+		_insideBounds = true;
+	else if (visitingCamera == defaultCamera)
+		_insideBounds = ((flags & FLAGS_TRANSFORM_DIRTY) || visitingCamera->isViewProjectionUpdated()) ? renderer->checkVisibility(transform, _contentSize) : _insideBounds;
+	else
+		// XXX: this always return true since
+		_insideBounds = renderer->checkVisibility(transform, _contentSize);
+
+	if (_insideBounds)
+#endif
+	{
+		_trianglesCommand.init(_globalZOrder,
+			_texture,
+			bf,
+			_polyInfo.triangles,
+			transform,
+			flags);
+		renderer->addCommand(&_trianglesCommand);
+
+#if CC_SPRITE_DEBUG_DRAW
+		_debugDrawNode->clear();
+		auto count = _polyInfo.triangles.indexCount / 3;
+		auto indices = _polyInfo.triangles.indices;
+		auto verts = _polyInfo.triangles.verts;
+		for (unsigned int i = 0; i < count; i++)
+		{
+			//draw 3 lines
+			Vec3 from = verts[indices[i * 3]].vertices;
+			Vec3 to = verts[indices[i * 3 + 1]].vertices;
+			_debugDrawNode->drawLine(Vec2(from.x, from.y), Vec2(to.x, to.y), Color4F::WHITE);
+
+			from = verts[indices[i * 3 + 1]].vertices;
+			to = verts[indices[i * 3 + 2]].vertices;
+			_debugDrawNode->drawLine(Vec2(from.x, from.y), Vec2(to.x, to.y), Color4F::WHITE);
+
+			from = verts[indices[i * 3 + 2]].vertices;
+			to = verts[indices[i * 3]].vertices;
+			_debugDrawNode->drawLine(Vec2(from.x, from.y), Vec2(to.x, to.y), Color4F::WHITE);
+		}
+#endif //CC_SPRITE_DEBUG_DRAW
+	}
+}
 
 /*void Star::draw(Renderer* renderer, const Mat4& transform, uint32_t flags)
 {}

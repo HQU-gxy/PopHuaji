@@ -34,6 +34,9 @@
     <ClCompile Include="D:\Poooooopstar\poooooop\poop\cocos2d\cocos\precheader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\GameOverLayer.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\Poooooopstar\poooooop\poop\Classes\AppDelegate.h">
@@ -69,152 +72,8 @@
     <ClInclude Include="D:\Poooooopstar\poooooop\poop\proj.win32\resource.h">
       <Filter>Source Files\proj.win32</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\CloseNormal.png">
-      <Filter>Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\CloseSelected.png">
-      <Filter>Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\HelloWorld.png">
-      <Filter>Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\Thumbs.db">
-      <Filter>Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\.svn\all-wcprops">
-      <Filter>Resources\buttons\.svn</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\.svn\entries">
-      <Filter>Resources\buttons\.svn</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\.svn\format">
-      <Filter>Resources\buttons\.svn</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\all-wcprops">
-      <Filter>Resources\buttons\default\.svn</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\entries">
-      <Filter>Resources\buttons\default\.svn</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\format">
-      <Filter>Resources\buttons\default\.svn</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\prop-base\00010.png.svn-base">
-      <Filter>Resources\buttons\default\.svn\prop-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\prop-base\Thumbs.db.svn-base">
-      <Filter>Resources\buttons\default\.svn\prop-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\text-base\00010.png.svn-base">
-      <Filter>Resources\buttons\default\.svn\text-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\.svn\text-base\Thumbs.db.svn-base">
-      <Filter>Resources\buttons\default\.svn\text-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\00010.png">
-      <Filter>Resources\buttons\default</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\buttons\default\Thumbs.db">
-      <Filter>Resources\buttons\default</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\all-wcprops">
-      <Filter>Resources\fonts\.svn</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\entries">
-      <Filter>Resources\fonts\.svn</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\format">
-      <Filter>Resources\fonts\.svn</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\prop-base\Marker Felt.ttf.svn-base">
-      <Filter>Resources\fonts\.svn\prop-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\prop-base\arial.ttf.svn-base">
-      <Filter>Resources\fonts\.svn\prop-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\text-base\Marker Felt.ttf.svn-base">
-      <Filter>Resources\fonts\.svn\text-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\.svn\text-base\arial.ttf.svn-base">
-      <Filter>Resources\fonts\.svn\text-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\Marker Felt.ttf">
-      <Filter>Resources\fonts</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\fonts\arial.ttf">
-      <Filter>Resources\fonts</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\popstar_bg.png">
-      <Filter>Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\popstar_start.png">
-      <Filter>Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\res\.gitkeep">
-      <Filter>Resources\res</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\all-wcprops">
-      <Filter>Resources\stars\.svn</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\entries">
-      <Filter>Resources\stars\.svn</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\format">
-      <Filter>Resources\stars\.svn</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\Thumbs.db.svn-base">
-      <Filter>Resources\stars\.svn\prop-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\blue.png.svn-base">
-      <Filter>Resources\stars\.svn\prop-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\green.png.svn-base">
-      <Filter>Resources\stars\.svn\prop-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\purple.png.svn-base">
-      <Filter>Resources\stars\.svn\prop-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\red.png.svn-base">
-      <Filter>Resources\stars\.svn\prop-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\prop-base\yellow.png.svn-base">
-      <Filter>Resources\stars\.svn\prop-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\Thumbs.db.svn-base">
-      <Filter>Resources\stars\.svn\text-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\blue.png.svn-base">
-      <Filter>Resources\stars\.svn\text-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\green.png.svn-base">
-      <Filter>Resources\stars\.svn\text-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\purple.png.svn-base">
-      <Filter>Resources\stars\.svn\text-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\red.png.svn-base">
-      <Filter>Resources\stars\.svn\text-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\.svn\text-base\yellow.png.svn-base">
-      <Filter>Resources\stars\.svn\text-base</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\Thumbs.db">
-      <Filter>Resources\stars</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\blue.png">
-      <Filter>Resources\stars</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\green.png">
-      <Filter>Resources\stars</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\purple.png">
-      <Filter>Resources\stars</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\red.png">
-      <Filter>Resources\stars</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Poooooopstar\poooooop\poop\Resources\stars\yellow.png">
-      <Filter>Resources\stars</Filter>
+    <ClInclude Include="..\Classes\GameOverLayer.h">
+      <Filter>Source Files\Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -229,51 +88,6 @@
     <Filter Include="Resources">
       <UniqueIdentifier>{0CEE969B-357E-3716-85B1-29A63DC3DAB9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resources\buttons">
-      <UniqueIdentifier>{8C292E13-180C-3570-A6E5-8EBA8503329C}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\buttons\.svn">
-      <UniqueIdentifier>{C7741F88-4BEA-3D9B-9DA9-A57FFD47DFEC}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\buttons\default">
-      <UniqueIdentifier>{0D1C5182-8225-337B-B78D-F553808F94E6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\buttons\default\.svn">
-      <UniqueIdentifier>{7D02E553-F1EA-32A7-BB4B-486D7BE8AF83}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\buttons\default\.svn\prop-base">
-      <UniqueIdentifier>{A5BE55A9-BB67-3A4F-93B1-9520A76503EF}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\buttons\default\.svn\text-base">
-      <UniqueIdentifier>{FBA2D3E8-E374-3AD8-9608-92DF4AA38D2B}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\fonts">
-      <UniqueIdentifier>{CFC2D995-59E5-31B1-8AAC-D16916449C34}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\fonts\.svn">
-      <UniqueIdentifier>{F41E114D-09DA-33F7-BD37-3664A67DA89C}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\fonts\.svn\prop-base">
-      <UniqueIdentifier>{CF6A9484-E751-3AB0-8922-992167290192}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\fonts\.svn\text-base">
-      <UniqueIdentifier>{A247174D-EF35-36E9-8C19-507212D5332C}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\res">
-      <UniqueIdentifier>{2E4A8338-0CE3-3629-AA55-7AAC4FE986F4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\stars">
-      <UniqueIdentifier>{481E6635-D561-36DB-B23C-06936D7B3E5D}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\stars\.svn">
-      <UniqueIdentifier>{1A1082F8-FEEB-310A-B015-6001C572C135}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\stars\.svn\prop-base">
-      <UniqueIdentifier>{CEEE882B-B237-3B79-B3CE-9B78A5EE46F1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\stars\.svn\text-base">
-      <UniqueIdentifier>{C9C60121-58CA-34AF-B337-BB7DE1FCA4E3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{A02E3C09-515C-3B73-B7C5-0E20C07324A6}</UniqueIdentifier>
     </Filter>
@@ -283,5 +97,16 @@
     <Filter Include="Source Files\proj.win32">
       <UniqueIdentifier>{3E5A77B7-E237-3C1B-A711-0316631D18B6}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\level_info_hint.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="..\Resources\popstar_over.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="..\Resources\popstar_start.png">
+      <Filter>Resources</Filter>
+    </Image>
   </ItemGroup>
 </Project>

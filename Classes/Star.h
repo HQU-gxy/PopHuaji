@@ -17,7 +17,7 @@ public:
     void setPos(const cocos2d::Point& pos);
     cocos2d::Point getDestPos();
     void setDestPos(const cocos2d::Point& pos);
-    //virtual void draw(cocos2d::Renderer* renderer, const cocos2d::Mat4& transform, uint32_t flags);
+    virtual void draw(cocos2d::Renderer* renderer, const cocos2d::Mat4& transform, uint32_t flags);
     
     void onUpdate(float delta);
     

@@ -54,7 +54,8 @@ public:
     void clearStarsOneByOne();
     void gotoNextLevel();		// 跳到下一关
     void gotoStartLayer();		// 返回到开始
-    
+    void GameOver();
+
 private:
     void onReduce();
     void onSelect(const SelectStar& selectStar);
