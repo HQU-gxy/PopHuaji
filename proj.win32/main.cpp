@@ -22,7 +22,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
     glView->setViewName("popstart");
     glView->setFrameSize(960, 640);
 
-    AudioEngine::play2d("sounds/Funky-Town.mp3", true);
+    AudioEngine::play2d("sounds/Funky-Town.mp3", true,0.5);
 
     return Application::getInstance()->run();
 }

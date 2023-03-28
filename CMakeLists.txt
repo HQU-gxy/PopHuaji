@@ -60,6 +60,7 @@ list(APPEND GAME_SOURCE
      Classes/AppDelegate.cpp
      Classes/GameLevel.cpp
      Classes/GameScene.cpp
+     Classes/GameOverLayer.cpp
      Classes/PopStar.cpp
      Classes/PopStarDataMgr.cpp
      Classes/PopStarLayer.cpp
@@ -72,6 +73,7 @@ list(APPEND GAME_HEADER
      Classes/AppDelegate.h
      Classes/GameLevel.h
      Classes/GameScene.h
+     Classes/GameOverLayer.h
      Classes/PopStar.h
      Classes/PopStarDataMgr.h
      Classes/PopStarLayer.h
