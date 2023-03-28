@@ -5,6 +5,7 @@
 * to tramsform the project from using Cocos2d-x v2 to v4;  
 * to replace the stars with 'Huaji' memes;  
 * to add a BGM;  
+* ...
 ### Build for Windows
 #### Make sure VS 2019 with *MSVC* and *CMake* is installed.
 * Clone this repo: `git clone https://github.com/HQU-gxy/PopHuaji`  
