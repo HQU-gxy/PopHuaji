@@ -14,4 +14,4 @@
 * Generate project configuration files: `cmake .. -A win32`
 * Open the solution file *win32-build\poop.sln*
 * Set *poop* as startup project (if not)
-* Build Solution(`cmake --build .` works as well)
+* Build Solution (`cmake --build .` works as well)
