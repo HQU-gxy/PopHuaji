@@ -7,15 +7,15 @@ namespace
 	const int MAX_STAR_NUM = 5;
 	const float MOVE_SPEED = 300.0f;
 	const std::string STAR_PATH[MAX_STAR_NUM] =
-	{
-		std::string("stars/red.png"),
-		std::string("stars/yellow.png"),
-		std::string("stars/green.png"),
-		std::string("stars/blue.png"),
-		std::string("stars/purple.png"),
+		{
+			std::string("stars/red.png"),
+			std::string("stars/yellow.png"),
+			std::string("stars/green.png"),
+			std::string("stars/blue.png"),
+			std::string("stars/purple.png"),
 	};
 
-	void Clamp(int& val, int min, int max)
+	void Clamp(int &val, int min, int max)
 	{
 		if (val < min)
 		{
@@ -37,9 +37,9 @@ Star::Star(int index)
 	init();
 }
 
-Star* Star::create(int index)
+Star *Star::create(int index)
 {
-	Star* pRet = new Star(index);
+	Star *pRet = new Star(index);
 	std::string path = pRet->getPath();
 	if (pRet && pRet->initWithFile(path.c_str()))
 	{
@@ -68,7 +68,7 @@ int Star::getIndex()
 	return index;
 }
 
-void Star::setPos(const cocos2d::Point& pos)
+void Star::setPos(const cocos2d::Point &pos)
 {
 	Sprite::setPosition(pos);
 
@@ -80,7 +80,7 @@ cocos2d::Point Star::getDestPos()
 	return destPos;
 }
 
-void Star::setDestPos(const cocos2d::Point& pos)
+void Star::setDestPos(const cocos2d::Point &pos)
 {
 	destPos = pos;
 }
@@ -95,24 +95,22 @@ bool Star::init()
 	return true;
 }
 
-void Star::draw(Renderer* renderer, const Mat4& transform, uint32_t flags)
+void Star::draw(Renderer *renderer, const Mat4 &transform, uint32_t flags)
 {
 	if (_texture == nullptr || _texture->getBackendTexture() == nullptr)
 		return;
 
-	//TODO: arnold: current camera can be a non-default one.
+	// TODO: arnold: current camera can be a non-default one.
 	setMVPMatrixUniform();
 	BlendFunc bf;
+
 	if (highlight)
-	{
-		bf = { backend::BlendFactor::SRC_COLOR, backend::BlendFactor::ONE };
-	}
+		bf = {backend::BlendFactor::SRC_COLOR, backend::BlendFactor::DST_COLOR};
 	else
-	{
-		bf = { backend::BlendFactor::SRC_COLOR, backend::BlendFactor::DST_COLOR };
-	}
+		bf = {backend::BlendFactor::ONE, backend::BlendFactor::ZERO};
+
 	setBlendFunc(bf);
-	
+
 #if CC_USE_CULLING
 	// Don't calculate the culling if the transform was not updated
 	auto visitingCamera = Camera::getVisitingCamera();
@@ -129,11 +127,11 @@ void Star::draw(Renderer* renderer, const Mat4& transform, uint32_t flags)
 #endif
 	{
 		_trianglesCommand.init(_globalZOrder,
-			_texture,
-			bf,
-			_polyInfo.triangles,
-			transform,
-			flags);
+							   _texture,
+							   bf,
+							   _polyInfo.triangles,
+							   transform,
+							   flags);
 		renderer->addCommand(&_trianglesCommand);
 
 #if CC_SPRITE_DEBUG_DRAW
@@ -143,7 +141,7 @@ void Star::draw(Renderer* renderer, const Mat4& transform, uint32_t flags)
 		auto verts = _polyInfo.triangles.verts;
 		for (unsigned int i = 0; i < count; i++)
 		{
-			//draw 3 lines
+			// draw 3 lines
 			Vec3 from = verts[indices[i * 3]].vertices;
 			Vec3 to = verts[indices[i * 3 + 1]].vertices;
 			_debugDrawNode->drawLine(Vec2(from.x, from.y), Vec2(to.x, to.y), Color4F::WHITE);
@@ -156,7 +154,7 @@ void Star::draw(Renderer* renderer, const Mat4& transform, uint32_t flags)
 			to = verts[indices[i * 3]].vertices;
 			_debugDrawNode->drawLine(Vec2(from.x, from.y), Vec2(to.x, to.y), Color4F::WHITE);
 		}
-#endif //CC_SPRITE_DEBUG_DRAW
+#endif // CC_SPRITE_DEBUG_DRAW
 	}
 }
 
@@ -204,11 +202,11 @@ void Star::draw(Renderer* renderer, const Mat4& transform, uint32_t flags)
 	diff = offsetof( ccV3F_C4B_T2F, colors);
 	glVertexAttribPointer(kCCVertexAttrib_Color, 4, GL_UNSIGNED_BYTE, GL_TRUE, kQuadSize, (void*)(offset + diff));
 
-	
+
 	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 
 	CHECK_GL_ERROR_DEBUG();
-	
+
 
 #if CC_SPRITE_DEBUG_DRAW == 1
 	// draw bounding box
@@ -240,14 +238,14 @@ void Star::draw(Renderer* renderer, const Mat4& transform, uint32_t flags)
 void Star::onUpdate(float delta)
 {
 	Point curPos = getPosition();
-	if ( curPos.equals(destPos) )
+	if (curPos.equals(destPos))
 	{
 		setPosition(destPos);
 	}
 
 	float speedX = 0.f;
 	float speedY = 0.f;
-	if ( fabs(curPos.x - destPos.x) < FLT_EPSILON )
+	if (fabs(curPos.x - destPos.x) < FLT_EPSILON)
 	{
 		speedX = 0.f;
 	}
@@ -260,7 +258,7 @@ void Star::onUpdate(float delta)
 		speedX = -MOVE_SPEED;
 	}
 
-	if ( fabs(curPos.y - destPos.y) < FLT_EPSILON )
+	if (fabs(curPos.y - destPos.y) < FLT_EPSILON)
 	{
 		speedY = 0.f;
 	}
@@ -304,8 +302,7 @@ void Star::onUpdate(float delta)
 			tempPosY = destPos.y;
 		}
 	}
-	setPosition( Vec2(tempPosX, tempPosY) );
-
+	setPosition(Vec2(tempPosX, tempPosY));
 
 	/*if ( ((int)curPos.x != (int)destPos.x) || ((int)curPos.y != (int)destPos.y) )
 	{
@@ -319,8 +316,7 @@ void Star::onUpdate(float delta)
 	}*/
 }
 
-
 std::string Star::getPath()
 {
-	return STAR_PATH[index-1];
+	return STAR_PATH[index - 1];
 }

@@ -1,8 +1,7 @@
 #include "PopStar.h"
-//#include "../extensions/CocoStudio/gui/UIWidgets/UILabel.h"
+// #include "../extensions/CocoStudio/gui/UIWidgets/UILabel.h"
 
 #include "PopStarLayer.h"
-
 USING_NS_CC;
 
 PopStarLayer::~PopStarLayer()
@@ -30,44 +29,50 @@ bool PopStarLayer::init()
 	srand((unsigned)time(NULL));
 
 	float scale = visibleSize.width / 320.f;
-	Sprite* levelInfoHint = Sprite::create("level_info_hint.png");
-	levelInfoHint->setPosition(Vec2(280 * scale, 160 * scale));
+
+	stringsJsonObj = new rapidjson::Document;
+	std::string resFile = FileUtils::getInstance()->getStringFromFile("strings.json");
+	stringsJsonObj->Parse<rapidjson::kParseDefaultFlags>(resFile.c_str());
+
+	Sprite *levelInfoHint = Sprite::create("bg.png");
+	levelInfoHint->setAnchorPoint(Vec2(0, 0));
+	levelInfoHint->setPosition(Vec2(0, 0));
 	levelInfoHint->setScale(1);
 	this->addChild(levelInfoHint, 0);
 
-	historyTotalScore = Label::createWithTTF("0", "fonts/arial.ttf", 24);
+	historyTotalScore = Label::createWithTTF("0", "fonts/msyh.ttc", 24);
 	if (historyTotalScore)
 	{
-		historyTotalScore->setPosition(Vec2(275 * scale, 181 * scale));
-		this->addChild(historyTotalScore);
+		historyTotalScore->setPosition(Vec2(260 * scale, 181 * scale));
+		this->addChild(historyTotalScore, 1);
 	}
 
-	historyLevelScore = Label::createWithTTF("0", "fonts/arial.ttf", 24);
+	historyLevelScore = Label::createWithTTF("0", "fonts/msyh.ttc", 24);
 	if (historyLevelScore)
 	{
-		historyLevelScore->setPosition(Vec2(275 * scale, 172 * scale));
-		this->addChild(historyLevelScore);
+		historyLevelScore->setPosition(Vec2(260 * scale, 172 * scale));
+		this->addChild(historyLevelScore, 1);
 	}
 
-	gameLevel = Label::createWithTTF("0", "fonts/arial.ttf", 24);
+	gameLevel = Label::createWithTTF("0", "fonts/msyh.ttc", 24);
 	if (gameLevel)
 	{
 		gameLevel->setPosition(Vec2(260 * scale, 162 * scale));
-		this->addChild(gameLevel);
+		this->addChild(gameLevel, 1);
 	}
 
-	targetScore = Label::createWithTTF("0", "fonts/arial.ttf", 24);
+	targetScore = Label::createWithTTF("0", "fonts/msyc.ttc", 24);
 	if (targetScore)
 	{
-		targetScore->setPosition(Vec2(300 * scale, 162 * scale));
-		this->addChild(targetScore);
+		targetScore->setPosition(Vec2(260 * scale, 152 * scale));
+		this->addChild(targetScore, 1);
 	}
 
-	curScore = Label::createWithTTF("0", "fonts/arial.ttf", 24);
+	curScore = Label::createWithTTF("0", "fonts/msyc.ttc", 24);
 	if (curScore)
 	{
-		curScore->setPosition(Vec2(260 * scale, 152 * scale));
-		this->addChild(curScore);
+		curScore->setPosition(Vec2(260 * scale, 142 * scale));
+		this->addChild(curScore, 1);
 	}
 
 	reduceScore = nullptr;
@@ -82,15 +87,15 @@ bool PopStarLayer::init()
 
 	this->schedule(CC_SCHEDULE_SELECTOR(PopStarLayer::update));
 
-
 	return true;
 }
 
 void PopStarLayer::onEnter()
 {
 	Layer::onEnter();
-	auto* listener = EventListenerTouchOneByOne::create();
-	listener->onTouchBegan = [&](Touch* pTouches, Event* pEvent) {
+	auto *listener = EventListenerTouchOneByOne::create();
+	listener->onTouchBegan = [&](Touch *pTouches, Event *pEvent)
+	{
 		Point locInView = pTouches->getLocationInView();
 		Point loc = Director::getInstance()->convertToGL(locInView);
 
@@ -102,7 +107,7 @@ void PopStarLayer::onEnter()
 	};
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
 
-	//this->setTouchEnabled(true);
+	// this->setTouchEnabled(true);
 }
 
 void PopStarLayer::update(float delta)
@@ -123,9 +128,9 @@ void PopStarLayer::onGuiEvent(GUI_EVENT_TYPE event, int nValue, unsigned int uVa
 	{
 		if (curScore)
 		{
-			char szBuf[32] = { 0 };
-			//itoa(nValue, szBuf, 10);
-			sprintf(szBuf, "%d", nValue);
+			char szBuf[32] = {0};
+			// itoa(nValue, szBuf, 10);
+			sprintf(szBuf, "%s%d", (*stringsJsonObj)["current_score"].GetString(), nValue);
 			curScore->setString(szBuf);
 		}
 	}
@@ -134,9 +139,9 @@ void PopStarLayer::onGuiEvent(GUI_EVENT_TYPE event, int nValue, unsigned int uVa
 	{
 		if (targetScore)
 		{
-			char szBuf[32] = { 0 };
-			//itoa(nValue, szBuf, 10);
-			sprintf(szBuf, "%d", nValue);
+			char szBuf[32] = {0};
+			// itoa(nValue, szBuf, 10);
+			sprintf(szBuf, "Target Score: %d", nValue);
 			targetScore->setString(szBuf);
 		}
 	}
@@ -145,9 +150,9 @@ void PopStarLayer::onGuiEvent(GUI_EVENT_TYPE event, int nValue, unsigned int uVa
 	{
 		if (gameLevel)
 		{
-			char szBuf[32] = { 0 };
-			//itoa(nValue, szBuf, 10);
-			sprintf(szBuf, "%d", nValue);
+			char szBuf[32] = {0};
+			// itoa(nValue, szBuf, 10);
+			sprintf(szBuf, "Level: %d", nValue);
 			gameLevel->setString(szBuf);
 		}
 	}
@@ -162,7 +167,7 @@ void PopStarLayer::onGuiEvent(GUI_EVENT_TYPE event, int nValue, unsigned int uVa
 			}
 			else
 			{
-				char szBuf[32] = { 0 };
+				char szBuf[32] = {0};
 				snprintf(szBuf, 32, "Number: %d Score: %u", nValue, uValue);
 				reduceScore->setString(szBuf);
 			}
@@ -173,8 +178,8 @@ void PopStarLayer::onGuiEvent(GUI_EVENT_TYPE event, int nValue, unsigned int uVa
 	{
 		if (historyTotalScore)
 		{
-			char szBuf[32] = { 0 };
-			snprintf(szBuf, 32, "%d", nValue);
+			char szBuf[32] = {0};
+			snprintf(szBuf, 32, "Highest Total Score: %d", nValue);
 			historyTotalScore->setString(szBuf);
 		}
 	}
@@ -183,8 +188,8 @@ void PopStarLayer::onGuiEvent(GUI_EVENT_TYPE event, int nValue, unsigned int uVa
 	{
 		if (historyLevelScore)
 		{
-			char szBuf[32] = { 0 };
-			snprintf(szBuf, 32, "%d", nValue);
+			char szBuf[32] = {0};
+			snprintf(szBuf, 32, "Highest Score of Current Level: %d", nValue);
 			historyLevelScore->setString(szBuf);
 		}
 	}

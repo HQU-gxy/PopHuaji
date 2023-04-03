@@ -13,18 +13,18 @@ USING_NS_CC;
 
 namespace
 {
-    const int STAR_WIDTH	= 64;
-    const int STAR_HEIGHT	= 64;
+    const int STAR_WIDTH = 64;
+    const int STAR_HEIGHT = 64;
 }
 
-PopStar::PopStar(PopStarLayer* layer)
+PopStar::PopStar(PopStarLayer *layer)
 {
     gameLayer = layer;
-    //ZeroMemory(stars, sizeof(Star*) * ROW_NUM * COL_NUM);
-    memset(stars, 0, sizeof(Star*) * ROW_NUM * COL_NUM);
+    // ZeroMemory(stars, sizeof(Star*) * ROW_NUM * COL_NUM);
+    memset(stars, 0, sizeof(Star *) * ROW_NUM * COL_NUM);
     elapsedTime = 0;
     currentState = NULL;
-    
+
     init();
 }
 
@@ -34,7 +34,7 @@ PopStar::~PopStar()
     {
         for (int col = 0; col < COL_NUM; ++col)
         {
-            Star* star = stars[row][col];
+            Star *star = stars[row][col];
             if (stars[row][col])
             {
                 gameLayer->removeChild(stars[row][col]);
@@ -42,19 +42,19 @@ PopStar::~PopStar()
             }
         }
     }
-    
+
     if (currentState)
     {
         delete currentState;
         currentState = NULL;
     }
-    
+
     gameLayer = NULL;
 }
 
-PopStar* PopStar::create(PopStarLayer* layer)
+PopStar *PopStar::create(PopStarLayer *layer)
 {
-    PopStar* pRet = new PopStar(layer);
+    PopStar *pRet = new PopStar(layer);
     if (pRet)
     {
         pRet->autorelease();
@@ -63,7 +63,7 @@ PopStar* PopStar::create(PopStarLayer* layer)
     {
         CC_SAFE_DELETE(pRet);
     }
-    
+
     return pRet;
 }
 
@@ -73,52 +73,52 @@ bool PopStar::init()
     {
         return false;
     }
-    
+
     if (!gameLayer)
     {
         return false;
     }
-    
+
     for (int row = 0; row < ROW_NUM; ++row)
     {
         for (int col = 0; col < COL_NUM; ++col)
         {
             int index = (rand() % 5) + 1;
-            Star* star = Star::create(index);
+            Star *star = Star::create(index);
             if (star)
             {
                 star->setScale(2);
-                //star->setContentSize(CCSize(STAR_WIDTH, STAR_HEIGHT));
-                star->setPos(Vec2(STAR_WIDTH*col + STAR_WIDTH/2, STAR_HEIGHT*row + STAR_HEIGHT/2 + row*20+col*5));
-                star->setDestPos(Vec2(STAR_WIDTH*col + STAR_WIDTH/2, STAR_HEIGHT*row + STAR_HEIGHT/2));
-                gameLayer->addChild(star);
-                
+                // star->setContentSize(CCSize(STAR_WIDTH, STAR_HEIGHT));
+                star->setPos(Vec2(STAR_WIDTH * col + STAR_WIDTH / 2, STAR_HEIGHT * row + STAR_HEIGHT / 2 + row * 20 + col * 5));
+                star->setDestPos(Vec2(STAR_WIDTH * col + STAR_WIDTH / 2, STAR_HEIGHT * row + STAR_HEIGHT / 2));
+                gameLayer->addChild(star,1);
+
                 stars[row][col] = star;
             }
         }
     }
-    
+
     int level = getPopStarDataMgr().getLevel();
     gameLayer->onGuiEvent(EVENT_UPDATE_LEVEL, level);
-    
+
     int score = getPopStarDataMgr().getScore();
     gameLayer->onGuiEvent(EVENT_UPDATE_SCORE, score);
-    
+
     int historyScore = getPopStarDataMgr().getHistoryScore();
     gameLayer->onGuiEvent(EVENT_UPDATE_TOTAL_HISTORY_SCORE, historyScore);
-    
+
     int historyLevelScore = getPopStarDataMgr().getHistoryLevelScoreByLevel(level);
     gameLayer->onGuiEvent(EVENT_UPDATE_LEVEL_HISTORY_SCORE, historyLevelScore);
-    
+
     int targetScore = getPopStarDataMgr().getTargetScoreByLevel(level);
     gameLayer->onGuiEvent(EVENT_UPDATE_TARGET_SCORE, targetScore);
-    
+
     currentState = new GameInitState(this);
-    
+
     return true;
 }
 
-void PopStar::onClick(const cocos2d::Point& pos)
+void PopStar::onClick(const cocos2d::Point &pos)
 {
     int row = pos.y / STAR_HEIGHT;
     int col = pos.x / STAR_WIDTH;
@@ -126,20 +126,19 @@ void PopStar::onClick(const cocos2d::Point& pos)
     {
         return;
     }
-    
-    Star* star = stars[row][col];
+
+    Star *star = stars[row][col];
     if (!star)
     {
         return;
     }
-    
+
     if (star->isHighLight())
     {
         // 高亮则消除
         this->onReduce();
         AudioEngine::play2d("sounds/pop_fx.mp3", false);
         gameLayer->onGuiEvent(EVENT_UPDATE_REDUCE_SCORE, 0);
-        
     }
     else
     {
@@ -148,7 +147,7 @@ void PopStar::onClick(const cocos2d::Point& pos)
         selectStar.row = row;
         selectStar.col = col;
         selectStar.star = star;
-        
+
         this->onSelect(selectStar);
     }
 }
@@ -159,7 +158,7 @@ void PopStar::setScore(int score)
     {
         return;
     }
-    
+
     getPopStarDataMgr().setScore(score);
     gameLayer->onGuiEvent(EVENT_UPDATE_SCORE, score);
 }
@@ -170,7 +169,7 @@ void PopStar::setLevel(int level)
     {
         return;
     }
-    
+
     getPopStarDataMgr().setLevel(level);
     gameLayer->onGuiEvent(EVENT_UPDATE_LEVEL, level);
 }
@@ -181,7 +180,7 @@ void PopStar::setHistoryScore(int score)
     {
         return;
     }
-    
+
     getPopStarDataMgr().setHistoryScore(score);
     gameLayer->onGuiEvent(EVENT_UPDATE_TOTAL_HISTORY_SCORE, score);
 }
@@ -192,7 +191,7 @@ void PopStar::setHistoryLevelScore(int score)
     {
         return;
     }
-    
+
     int level = getPopStarDataMgr().getLevel();
     getPopStarDataMgr().setHistoryLevelScore(level, score);
     gameLayer->onGuiEvent(EVENT_UPDATE_LEVEL_HISTORY_SCORE, score);
@@ -204,7 +203,7 @@ void PopStar::setTargetScore(int score)
     {
         return;
     }
-    
+
     gameLayer->onGuiEvent(EVENT_UPDATE_TARGET_SCORE, score);
 }
 
@@ -214,14 +213,14 @@ void PopStar::onUpdate(float delta)
     {
         for (int col = 0; col < COL_NUM; ++col)
         {
-            Star* star = stars[row][col];
+            Star *star = stars[row][col];
             if (star)
             {
                 star->onUpdate(delta);
             }
         }
     }
-    
+
     if (currentState)
     {
         currentState->execute(delta);
@@ -234,34 +233,34 @@ bool PopStar::isLevelEnd()
     {
         for (int col = 0; col < COL_NUM; ++col)
         {
-            Star* star = stars[row][col];
+            Star *star = stars[row][col];
             if (star == NULL)
             {
                 continue;
             }
-            
+
             int checkRow = row + 1;
             if (checkRow < ROW_NUM)
             {
-                Star* checkStar = stars[checkRow][col];
-                if ( checkStar && (star->getIndex() == checkStar->getIndex()) )
+                Star *checkStar = stars[checkRow][col];
+                if (checkStar && (star->getIndex() == checkStar->getIndex()))
                 {
                     return false;
                 }
             }
-            
+
             int checkCol = col + 1;
             if (checkCol < COL_NUM)
             {
-                Star* checkStar = stars[row][checkCol];
-                if ( checkStar && (star->getIndex() == checkStar->getIndex()) )
+                Star *checkStar = stars[row][checkCol];
+                if (checkStar && (star->getIndex() == checkStar->getIndex()))
                 {
                     return false;
                 }
             }
         }
     }
-    
+
     return true;
 }
 
@@ -273,36 +272,36 @@ bool PopStar::isGameOver()
     return (curScore < needScore);
 }
 
-void PopStar::changeState(PopStarState* newState)
+void PopStar::changeState(PopStarState *newState)
 {
     if (!currentState || !newState)
     {
         return;
     }
-    
+
     // 调用现有状态的退出方法
     currentState->exit();
-    
+
     // 改变状态到新状态
     currentState = newState;
-    
+
     // 调用新状态的进入方法
     currentState->enter();
 }
 
 bool PopStar::isInitFinish()
 {
-    Star* star = stars[ROW_NUM-1][COL_NUM-1];
+    Star *star = stars[ROW_NUM - 1][COL_NUM - 1];
     if (star)
     {
         Point pos = star->getPosition();
         Point destPos = star->getDestPos();
-        if ( pos.equals(destPos) )
+        if (pos.equals(destPos))
         {
             return true;
         }
     }
-    
+
     return false;
 }
 
@@ -312,11 +311,11 @@ void PopStar::onReduce()
     {
         return;
     }
-    
+
     int num = selectStars.size();
     int score = getPopStarDataMgr().getScore() + getPopStarDataMgr().getScoreByReduceNum(num);
     setScore(score);
-    
+
     StarListIter iter;
     for (iter = selectStars.begin(); iter != selectStars.end(); ++iter)
     {
@@ -324,15 +323,14 @@ void PopStar::onReduce()
         stars[iter->row][iter->col] = NULL;
     }
     selectStars.clear();
-    
-    
+
     // 竖直调整
     for (int row = 0; row < ROW_NUM; ++row)
     {
         for (int col = 0; col < COL_NUM; ++col)
         {
             int tempRow = row;
-            Star* star = stars[row][col];
+            Star *star = stars[row][col];
             if (star)
             {
                 continue;
@@ -348,7 +346,7 @@ void PopStar::onReduce()
                     }
                     ++tempRow;
                 }
-                
+
                 if (star)
                 {
                     stars[row][col] = stars[tempRow][col];
@@ -357,7 +355,7 @@ void PopStar::onReduce()
             }
         }
     }
-    
+
     while (isNeedHoriAdjust())
     {
         int endCol = getCheckEndCol();
@@ -369,123 +367,121 @@ void PopStar::onReduce()
                 {
                     for (int row = 0; row < ROW_NUM; ++row)
                     {
-                        stars[row][i] = stars[row][i+1];
+                        stars[row][i] = stars[row][i + 1];
                     }
                 }
-                
+
                 for (int row = 0; row < ROW_NUM; ++row)
                 {
                     stars[row][endCol] = NULL;
                 }
-                
+
                 break;
             }
         }
     }
-    
-    
+
     // 刷新位置
     for (int row = 0; row < ROW_NUM; ++row)
     {
         for (int col = 0; col < COL_NUM; ++col)
         {
-            Star* star = stars[row][col];
+            Star *star = stars[row][col];
             if (star)
             {
-                star->setDestPos(Vec2(STAR_WIDTH*col + STAR_WIDTH/2, STAR_HEIGHT*row + STAR_HEIGHT/2));
+                star->setDestPos(Vec2(STAR_WIDTH * col + STAR_WIDTH / 2, STAR_HEIGHT * row + STAR_HEIGHT / 2));
             }
         }
     }
-    
+
     if (isLevelEnd())
     {
         int num = getLeftStarNum();
         int score = getPopStarDataMgr().getScore() + getPopStarDataMgr().getScoreByLeftNum(num);
         setScore(score);
-        
+
         int historyScore = getPopStarDataMgr().getHistoryScore();
         if (score > historyScore)
         {
             setHistoryScore(score);
         }
-        
+
         int level = getPopStarDataMgr().getLevel();
         int historyLevelScore = getPopStarDataMgr().getHistoryLevelScoreByLevel(level);
         if (score > historyLevelScore)
         {
             setHistoryLevelScore(score);
         }
-        
-        
+
         if (isGameOver()) // 游戏结束
         {
-            changeState( new GameOverState(this) );
+            changeState(new GameOverState(this));
         }
         else // 下一等级
         {
-            changeState( new GamePassLevelState(this) );
+            changeState(new GamePassLevelState(this));
         }
     }
 }
 
-void PopStar::onSelect(const SelectStar& selectStar)
+void PopStar::onSelect(const SelectStar &selectStar)
 {
     clearSelectStars();
-    
-    std::map<int, Star*> checkList;
-    checkList.insert(std::make_pair(selectStar.row*REVERSE_NUM+selectStar.col, selectStar.star));
-    
+
+    std::map<int, Star *> checkList;
+    checkList.insert(std::make_pair(selectStar.row * REVERSE_NUM + selectStar.col, selectStar.star));
+
     int index = selectStar.star->getIndex();
     while (!checkList.empty())
     {
-        std::map<int, Star*>::iterator iter;
-        for (iter = checkList.begin(); iter != checkList.end(); )
+        std::map<int, Star *>::iterator iter;
+        for (iter = checkList.begin(); iter != checkList.end();)
         {
-            int row = iter->first/REVERSE_NUM;
-            int col = iter->first%REVERSE_NUM;
-            
+            int row = iter->first / REVERSE_NUM;
+            int col = iter->first % REVERSE_NUM;
+
             // 分别检查上下左右的格子
-            if (row < (ROW_NUM-1)) // 上
+            if (row < (ROW_NUM - 1)) // 上
             {
-                int checkRow = row+1;
-                Star* temp = stars[checkRow][col];
+                int checkRow = row + 1;
+                Star *temp = stars[checkRow][col];
                 if (temp && (temp->getIndex() == index) && !temp->isHighLight())
                 {
-                    checkList.insert( std::make_pair((checkRow)*REVERSE_NUM + col, temp) );
+                    checkList.insert(std::make_pair((checkRow)*REVERSE_NUM + col, temp));
                 }
             }
-            
+
             if (row > 0) // 下
             {
-                int checkRow = row-1;
-                Star* temp = stars[checkRow][col];
+                int checkRow = row - 1;
+                Star *temp = stars[checkRow][col];
                 if (temp && (temp->getIndex() == index) && !temp->isHighLight())
                 {
-                    checkList.insert( std::make_pair((checkRow)*REVERSE_NUM + col, temp) );
+                    checkList.insert(std::make_pair((checkRow)*REVERSE_NUM + col, temp));
                 }
             }
-            
+
             if (col > 0) // 左
             {
-                int checkCol = col-1;
-                Star* temp = stars[row][checkCol];
+                int checkCol = col - 1;
+                Star *temp = stars[row][checkCol];
                 if (temp && (temp->getIndex() == index) && !temp->isHighLight())
                 {
-                    checkList.insert( std::make_pair(row*REVERSE_NUM + checkCol, temp) );
+                    checkList.insert(std::make_pair(row * REVERSE_NUM + checkCol, temp));
                 }
             }
-            
-            if (col < (COL_NUM-1)) // 右
+
+            if (col < (COL_NUM - 1)) // 右
             {
-                int checkCol = col+1;
-                Star* temp = stars[row][checkCol];
+                int checkCol = col + 1;
+                Star *temp = stars[row][checkCol];
                 if (temp && (temp->getIndex() == index) && !temp->isHighLight())
                 {
-                    checkList.insert( std::make_pair(row*REVERSE_NUM + checkCol, temp) );
+                    checkList.insert(std::make_pair(row * REVERSE_NUM + checkCol, temp));
                 }
             }
-            
-            Star* star = iter->second;
+
+            Star *star = iter->second;
             if ((star->getIndex() == index) && !star->isHighLight())
             {
                 star->setHighLight(true);
@@ -494,7 +490,7 @@ void PopStar::onSelect(const SelectStar& selectStar)
                 sstar.col = col;
                 sstar.star = star;
                 selectStars.push_back(sstar);
-                
+
                 checkList.erase(iter++);
             }
             else
@@ -503,17 +499,17 @@ void PopStar::onSelect(const SelectStar& selectStar)
             }
         }
     }
-    
+
     int selectStarNum = selectStars.size();
     if (selectStarNum == 1)
     {
-        Star* star = selectStars.begin()->star;
+        Star *star = selectStars.begin()->star;
         if (star)
         {
             star->setHighLight(false);
             selectStars.clear();
         }
-        
+
         gameLayer->onGuiEvent(EVENT_UPDATE_REDUCE_SCORE, 0);
     }
     else
@@ -540,7 +536,7 @@ bool PopStar::isNeedHoriAdjust()
     bool haveHole = false;
     for (int i = 0; i < COL_NUM; ++i)
     {
-        Star* star = stars[0][i];
+        Star *star = stars[0][i];
         if (!star)
         {
             haveHole = true;
@@ -550,13 +546,13 @@ bool PopStar::isNeedHoriAdjust()
             needHoriAdjust = true;
         }
     }
-    
+
     return needHoriAdjust;
 }
 
 int PopStar::getCheckEndCol()
 {
-    int endCol = COL_NUM-1;
+    int endCol = COL_NUM - 1;
     while (endCol >= 0)
     {
         if (stars[0][endCol])
@@ -565,7 +561,7 @@ int PopStar::getCheckEndCol()
         }
         --endCol;
     }
-    
+
     return endCol;
 }
 
@@ -582,22 +578,22 @@ int PopStar::getLeftStarNum()
             }
         }
     }
-    
+
     return num;
 }
 
 void PopStar::clearStarsOneByOne()
 {
-    for (int row = ROW_NUM-1; row >= 0; --row)
+    for (int row = ROW_NUM - 1; row >= 0; --row)
     {
-        for (int col = COL_NUM-1; col >= 0; --col)
+        for (int col = COL_NUM - 1; col >= 0; --col)
         {
-            Star* star = stars[row][col];
+            Star *star = stars[row][col];
             if (star)
             {
                 gameLayer->removeChild(star);
                 stars[row][col] = NULL;
-                
+
                 return;
             }
         }
@@ -608,12 +604,12 @@ void PopStar::gotoNextLevel()
 {
     int level = getPopStarDataMgr().getLevel() + 1;
     getPopStarDataMgr().setLevel(level);
-    
-    changeLayer( gameLayer, GameLevel::create() );
+
+    changeLayer(gameLayer, GameLevel::create());
 }
 
-
-void PopStar::GameOver() {
+void PopStar::GameOver()
+{
     getPopStarDataMgr().setScore(0);
     getPopStarDataMgr().setLevel(1);
 

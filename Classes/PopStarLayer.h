@@ -2,7 +2,8 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
-
+#include "json/rapidjson.h"
+#include "json/document.h"
 class PopStar;
 
 enum GUI_EVENT_TYPE
@@ -40,7 +41,8 @@ public:
     cocos2d::Label* targetScore;		// 目标
     cocos2d::Label* curScore;			// 分数
     cocos2d::Label* reduceScore;
-    
+    rapidjson::Document *stringsJsonObj;
+
 private:
     PopStar*	popStar;
     
