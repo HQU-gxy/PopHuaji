@@ -41,7 +41,7 @@ public:
     cocos2d::Label* targetScore;		// 目标
     cocos2d::Label* curScore;			// 分数
     cocos2d::Label* reduceScore;
-    rapidjson::Document *stringsJsonObj;
+    
 
 private:
     PopStar*	popStar;

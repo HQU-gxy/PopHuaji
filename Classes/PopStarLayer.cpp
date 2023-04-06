@@ -4,6 +4,8 @@
 #include "PopStarLayer.h"
 USING_NS_CC;
 
+rapidjson::Document stringsJsonObj;
+
 PopStarLayer::~PopStarLayer()
 {
 	if (popStar)
@@ -30,47 +32,51 @@ bool PopStarLayer::init()
 
 	float scale = visibleSize.width / 320.f;
 
-	stringsJsonObj = new rapidjson::Document;
 	std::string resFile = FileUtils::getInstance()->getStringFromFile("strings.json");
-	stringsJsonObj->Parse<rapidjson::kParseDefaultFlags>(resFile.c_str());
+	stringsJsonObj.Parse<rapidjson::kParseDefaultFlags>(resFile.c_str());
 
-	Sprite *levelInfoHint = Sprite::create("bg.png");
-	levelInfoHint->setAnchorPoint(Vec2(0, 0));
-	levelInfoHint->setPosition(Vec2(0, 0));
-	levelInfoHint->setScale(1);
-	this->addChild(levelInfoHint, 0);
+	Sprite *backGround = Sprite::create("bg.jpg");
+	backGround->setAnchorPoint(Vec2(0, 0));
+	backGround->setPosition(Vec2(0, 0));
+	backGround->setScale(1);
+	this->addChild(backGround, 0);
 
-	historyTotalScore = Label::createWithTTF("0", "fonts/msyh.ttc", 24);
+	historyTotalScore = Label::createWithTTF("0", "fonts/msyhbd.ttc", 24);
 	if (historyTotalScore)
 	{
+		historyTotalScore->setColor(Color3B::BLUE);
 		historyTotalScore->setPosition(Vec2(260 * scale, 181 * scale));
 		this->addChild(historyTotalScore, 1);
 	}
 
-	historyLevelScore = Label::createWithTTF("0", "fonts/msyh.ttc", 24);
+	historyLevelScore = Label::createWithTTF("0", "fonts/msyhbd.ttc", 24);
 	if (historyLevelScore)
 	{
+		historyLevelScore->setColor(Color3B::BLUE);
 		historyLevelScore->setPosition(Vec2(260 * scale, 172 * scale));
 		this->addChild(historyLevelScore, 1);
 	}
 
-	gameLevel = Label::createWithTTF("0", "fonts/msyh.ttc", 24);
+	gameLevel = Label::createWithTTF("0", "fonts/msyhbd.ttc", 24);
 	if (gameLevel)
 	{
+		gameLevel->setColor(Color3B::BLUE);
 		gameLevel->setPosition(Vec2(260 * scale, 162 * scale));
 		this->addChild(gameLevel, 1);
 	}
 
-	targetScore = Label::createWithTTF("0", "fonts/msyc.ttc", 24);
+	targetScore = Label::createWithTTF("0", "fonts/msycbd.ttc", 24);
 	if (targetScore)
 	{
+		targetScore->setColor(Color3B::BLUE);
 		targetScore->setPosition(Vec2(260 * scale, 152 * scale));
 		this->addChild(targetScore, 1);
 	}
 
-	curScore = Label::createWithTTF("0", "fonts/msyc.ttc", 24);
+	curScore = Label::createWithTTF("0", "fonts/msyhbd.ttc", 24);
 	if (curScore)
 	{
+		curScore->setColor(Color3B::BLUE);
 		curScore->setPosition(Vec2(260 * scale, 142 * scale));
 		this->addChild(curScore, 1);
 	}
@@ -130,7 +136,7 @@ void PopStarLayer::onGuiEvent(GUI_EVENT_TYPE event, int nValue, unsigned int uVa
 		{
 			char szBuf[32] = {0};
 			// itoa(nValue, szBuf, 10);
-			sprintf(szBuf, "%s%d", (*stringsJsonObj)["current_score"].GetString(), nValue);
+			sprintf(szBuf, "%s%d", stringsJsonObj["current_score"].GetString(), nValue);
 			curScore->setString(szBuf);
 		}
 	}
@@ -141,7 +147,7 @@ void PopStarLayer::onGuiEvent(GUI_EVENT_TYPE event, int nValue, unsigned int uVa
 		{
 			char szBuf[32] = {0};
 			// itoa(nValue, szBuf, 10);
-			sprintf(szBuf, "Target Score: %d", nValue);
+			sprintf(szBuf, "%s%d", stringsJsonObj["target_score"].GetString(), nValue);
 			targetScore->setString(szBuf);
 		}
 	}
@@ -152,7 +158,7 @@ void PopStarLayer::onGuiEvent(GUI_EVENT_TYPE event, int nValue, unsigned int uVa
 		{
 			char szBuf[32] = {0};
 			// itoa(nValue, szBuf, 10);
-			sprintf(szBuf, "Level: %d", nValue);
+			sprintf(szBuf, "%s%d", stringsJsonObj["level"].GetString(), nValue);
 			gameLevel->setString(szBuf);
 		}
 	}
@@ -179,7 +185,7 @@ void PopStarLayer::onGuiEvent(GUI_EVENT_TYPE event, int nValue, unsigned int uVa
 		if (historyTotalScore)
 		{
 			char szBuf[32] = {0};
-			snprintf(szBuf, 32, "Highest Total Score: %d", nValue);
+			snprintf(szBuf, 32, "%s%d", stringsJsonObj["history_score_total"].GetString(), nValue);
 			historyTotalScore->setString(szBuf);
 		}
 	}
@@ -189,7 +195,7 @@ void PopStarLayer::onGuiEvent(GUI_EVENT_TYPE event, int nValue, unsigned int uVa
 		if (historyLevelScore)
 		{
 			char szBuf[32] = {0};
-			snprintf(szBuf, 32, "Highest Score of Current Level: %d", nValue);
+			snprintf(szBuf, 32, "%s%d", stringsJsonObj["history_score_level"].GetString(), nValue);
 			historyLevelScore->setString(szBuf);
 		}
 	}

@@ -35,22 +35,22 @@ bool StartLayer::init()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	float scale = visibleSize.width / 320.f;
+	float scale = visibleSize.height / 320.f;
 
 	Sprite* popStarBg = Sprite::create("popstar_start.png");
 	popStarBg->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2));
-	popStarBg->setScale(2);
+	popStarBg->setScale(scale);
 	this->addChild(popStarBg, 0);
 
 
-	MenuItemImage* item = MenuItemImage::create("buttons/start.png",
+	MenuItemImage* button = MenuItemImage::create("buttons/start.png",
 		"buttons/start.png",
 		CC_CALLBACK_1(StartLayer::onClickMenu,this));
 
-	item->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 3));
-	item->setScale(1.0, 1.0);
+	button->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 3));
+	// button->setScale(1.0, 1.0);
 
-	Menu* menu = Menu::create(item, NULL);
+	Menu* menu = Menu::create(button, NULL);
 	menu->setPosition(Vec2(-10,0));
 	this->addChild(menu);
 	
