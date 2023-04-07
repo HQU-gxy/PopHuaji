@@ -105,7 +105,7 @@ void Star::draw(Renderer *renderer, const Mat4 &transform, uint32_t flags)
 	BlendFunc bf;
 
 	if (highlight)
-		bf = {backend::BlendFactor::SRC_COLOR, backend::BlendFactor::DST_COLOR};
+		bf = {backend::BlendFactor::ONE, backend::BlendFactor::SRC_COLOR};
 	else
 		bf = {backend::BlendFactor::ONE, backend::BlendFactor::ZERO};
 

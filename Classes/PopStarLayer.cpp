@@ -35,7 +35,7 @@ bool PopStarLayer::init()
 	std::string resFile = FileUtils::getInstance()->getStringFromFile("strings.json");
 	stringsJsonObj.Parse<rapidjson::kParseDefaultFlags>(resFile.c_str());
 
-	Sprite *backGround = Sprite::create("bg.jpg");
+	Sprite *backGround = Sprite::create("bg.png");
 	backGround->setAnchorPoint(Vec2(0, 0));
 	backGround->setPosition(Vec2(0, 0));
 	backGround->setScale(1);
@@ -45,7 +45,7 @@ bool PopStarLayer::init()
 	if (historyTotalScore)
 	{
 		historyTotalScore->setColor(Color3B::BLUE);
-		historyTotalScore->setPosition(Vec2(260 * scale, 181 * scale));
+		historyTotalScore->setPosition(Vec2(xLabels * scale, 181 * scale));
 		this->addChild(historyTotalScore, 1);
 	}
 
@@ -53,7 +53,7 @@ bool PopStarLayer::init()
 	if (historyLevelScore)
 	{
 		historyLevelScore->setColor(Color3B::BLUE);
-		historyLevelScore->setPosition(Vec2(260 * scale, 172 * scale));
+		historyLevelScore->setPosition(Vec2(xLabels * scale, 172 * scale));
 		this->addChild(historyLevelScore, 1);
 	}
 
@@ -61,7 +61,7 @@ bool PopStarLayer::init()
 	if (gameLevel)
 	{
 		gameLevel->setColor(Color3B::BLUE);
-		gameLevel->setPosition(Vec2(260 * scale, 162 * scale));
+		gameLevel->setPosition(Vec2(xLabels * scale, 162 * scale));
 		this->addChild(gameLevel, 1);
 	}
 
@@ -69,7 +69,7 @@ bool PopStarLayer::init()
 	if (targetScore)
 	{
 		targetScore->setColor(Color3B::BLUE);
-		targetScore->setPosition(Vec2(260 * scale, 152 * scale));
+		targetScore->setPosition(Vec2(xLabels * scale, 152 * scale));
 		this->addChild(targetScore, 1);
 	}
 
@@ -77,14 +77,14 @@ bool PopStarLayer::init()
 	if (curScore)
 	{
 		curScore->setColor(Color3B::BLUE);
-		curScore->setPosition(Vec2(260 * scale, 142 * scale));
+		curScore->setPosition(Vec2(xLabels * scale, 142 * scale));
 		this->addChild(curScore, 1);
 	}
 
 	reduceScore = nullptr;
 	if (reduceScore)
 	{
-		reduceScore->setPosition(Vec2(260 * scale, 152 * scale));
+		reduceScore->setPosition(Vec2(xLabels * scale, 152 * scale));
 		reduceScore->setHorizontalAlignment(TextHAlignment::LEFT);
 		this->addChild(reduceScore);
 	}

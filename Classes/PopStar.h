@@ -62,7 +62,9 @@ private:
     void clearSelectStars();
     bool isNeedHoriAdjust();	// 是否需要水平调整
     int  getCheckEndCol();		// 获取需要水平调整的最大列数
-    
+    float starsYOffset=50.f;
+    float starsXOffset=25.f;
+
 private:
     PopStarLayer*	gameLayer;
     Star*			stars[ROW_NUM][COL_NUM];

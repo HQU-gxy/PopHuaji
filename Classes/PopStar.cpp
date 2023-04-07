@@ -89,9 +89,9 @@ bool PopStar::init()
             {
                 star->setScale(2);
                 // star->setContentSize(CCSize(STAR_WIDTH, STAR_HEIGHT));
-                star->setPos(Vec2(STAR_WIDTH * col + STAR_WIDTH / 2, STAR_HEIGHT * row + STAR_HEIGHT / 2 + row * 20 + col * 5));
-                star->setDestPos(Vec2(STAR_WIDTH * col + STAR_WIDTH / 2, STAR_HEIGHT * row + STAR_HEIGHT / 2));
-                gameLayer->addChild(star,1);
+                star->setPos(Vec2(STAR_WIDTH * col + STAR_WIDTH / 2 + starsXOffset, STAR_HEIGHT * row + STAR_HEIGHT / 2 + row * 20 + col * 5 + starsYOffset));
+                star->setDestPos(Vec2(STAR_WIDTH * col + STAR_WIDTH / 2 + starsXOffset, STAR_HEIGHT * row + STAR_HEIGHT / 2 + starsYOffset));
+                gameLayer->addChild(star, 1);
 
                 stars[row][col] = star;
             }
@@ -120,8 +120,8 @@ bool PopStar::init()
 
 void PopStar::onClick(const cocos2d::Point &pos)
 {
-    int row = pos.y / STAR_HEIGHT;
-    int col = pos.x / STAR_WIDTH;
+    int row = (pos.y - starsYOffset) / STAR_HEIGHT;
+    int col = (pos.x - starsXOffset) / STAR_WIDTH;
     if (row >= ROW_NUM || col >= COL_NUM)
     {
         return;
@@ -137,7 +137,6 @@ void PopStar::onClick(const cocos2d::Point &pos)
     {
         // 高亮则消除
         this->onReduce();
-        AudioEngine::play2d("sounds/pop_fx.mp3", false);
         gameLayer->onGuiEvent(EVENT_UPDATE_REDUCE_SCORE, 0);
     }
     else
@@ -316,6 +315,25 @@ void PopStar::onReduce()
     int score = getPopStarDataMgr().getScore() + getPopStarDataMgr().getScoreByReduceNum(num);
     setScore(score);
 
+    switch (num / 3)
+    {
+    case 0:
+        AudioEngine::play2d("sounds/pop_fx0.mp3", false);
+        break;
+
+    case 1:
+        AudioEngine::play2d("sounds/pop_fx1.mp3", false);
+        break;
+
+    case 2:
+        AudioEngine::play2d("sounds/pop_fx2.mp3", false);
+        break;
+
+    default:
+        AudioEngine::play2d("sounds/pop_fx_many.mp3", false);
+        break;
+    }
+
     StarListIter iter;
     for (iter = selectStars.begin(); iter != selectStars.end(); ++iter)
     {
@@ -389,7 +407,7 @@ void PopStar::onReduce()
             Star *star = stars[row][col];
             if (star)
             {
-                star->setDestPos(Vec2(STAR_WIDTH * col + STAR_WIDTH / 2, STAR_HEIGHT * row + STAR_HEIGHT / 2));
+                star->setDestPos(Vec2(STAR_WIDTH * col + STAR_WIDTH / 2 + starsXOffset, STAR_HEIGHT * row + STAR_HEIGHT / 2 + starsYOffset));
             }
         }
     }

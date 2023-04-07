@@ -45,7 +45,7 @@ public:
 
 private:
     PopStar*	popStar;
-    
+    int xLabels=267;
     
 };
 

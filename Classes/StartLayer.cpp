@@ -35,11 +35,9 @@ bool StartLayer::init()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	float scale = visibleSize.height / 320.f;
-
 	Sprite* popStarBg = Sprite::create("popstar_start.png");
 	popStarBg->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2));
-	popStarBg->setScale(scale);
+	popStarBg->setScale(2);
 	this->addChild(popStarBg, 0);
 
 

@@ -23,7 +23,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
     auto glView = GLViewImpl::create(d["title"].GetString());
     Director::getInstance()->setOpenGLView(glView);
 
-    glView->setFrameSize(960, 640);
+    glView->setFrameSize(960, 720);
 
     AudioEngine::play2d("sounds/Funky-Town.mp3", true, 0.2f);
 
